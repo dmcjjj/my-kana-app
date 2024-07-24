@@ -1,11 +1,13 @@
 import React from 'react';
+import { Box, Text } from '@chakra-ui/react';
 import KanaStudyTool from './components/KanaStudyTool';
 
 function App() {
   return (
-    <div className="App">
+    <Box className="App">
+      <Text>App is loading...</Text>
       <KanaStudyTool />
-    </div>
+    </Box>
   );
 }
 
