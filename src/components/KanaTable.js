@@ -1,17 +1,19 @@
 import React from 'react';
+import { Grid, GridItem, Text } from '@chakra-ui/react';
 
 const KanaTable = React.memo(({ kanaSet }) => (
-  <div className="grid grid-cols-5 gap-2 text-center">
+  <Grid templateColumns="repeat(5, 1fr)" gap={2}>
     {kanaSet.map(({ hiragana, katakana, romaji }) => (
-      <div key={romaji} className="border p-2">
-        <div className="text-xl font-bold flex justify-between">
+      <GridItem key={romaji} borderWidth={1} p={2}>
+        <Text fontSize="xl" fontWeight="bold" display="flex" justifyContent="space-between">
           <span>{hiragana}</span>
           <span>{katakana}</span>
-        </div>
-        <div className="text-sm">{romaji}</div>
-      </div>
+        </Text>
+        <Text fontSize="sm">{romaji}</Text>
+      </GridItem>
     ))}
-  </div>
+  </Grid>
 ));
 
 export default KanaTable;
+
