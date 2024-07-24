@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom global styles go here */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* You can also define custom utility classes */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
