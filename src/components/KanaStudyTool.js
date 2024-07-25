@@ -66,13 +66,13 @@ const KanaStudyTool = () => {
       </CardHeader>
       <CardBody>
         <VStack spacing={4}>
-          <Text fontSize="6xl" fontWeight="bold">{currentKana[kanaType]}</Text>
+          <Text fontSize="7xl" fontWeight="bold">{currentKana[kanaType]}</Text>
           <form onSubmit={checkAnswer}>
             <Box position="relative">
               <Input
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
-                onKeyPress={handleKeyPress}
+                onKeyDown={handleKeyPress}
                 placeholder="Enter romaji here"
                 textAlign="center"
               />
@@ -100,8 +100,8 @@ const KanaStudyTool = () => {
           {showTable && (
             <Tabs>
               <TabList>
-                <Tab>Basic</Tab>
-                <Tab>Voiced</Tab>
+                <Tab width="50%">Basic</Tab>
+                <Tab width="50%">Voiced</Tab>
               </TabList>
               <TabPanels>
                 <TabPanel>
