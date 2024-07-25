@@ -73,12 +73,9 @@ const KanaStudyTool = () => {
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Enter romaji"
+                placeholder="Enter romaji here"
                 textAlign="center"
               />
-              <Text position="absolute" right={2} top="50%" transform="translateY(-50%)" fontSize="xs" color="gray.400">
-                Press Enter
-              </Text>
             </Box>
           </form>
           <Text>{feedback}</Text>
