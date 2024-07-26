@@ -60,15 +60,15 @@ const KanaStudyTool = () => {
   };
 
   return (
-    <Card maxW="md" mx="auto">
+    <Card maxW="container.lg" mx="auto" width="100%">
       <CardHeader>
         <Heading size="md" textAlign="center">Kana Study Tool</Heading>
       </CardHeader>
       <CardBody>
-        <VStack spacing={4}>
+        <VStack spacing={4} width="100%">
           <Text fontSize="7xl" fontWeight="bold">{currentKana[kanaType]}</Text>
-          <form onSubmit={checkAnswer}>
-            <Box position="relative">
+          <form onSubmit={checkAnswer} style={{ width: '100%' }}>
+            <Box position="relative" width="100%">
               <Input
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
@@ -98,16 +98,16 @@ const KanaStudyTool = () => {
             {showTable ? 'Hide' : 'Show'} Kana Table
           </Button>
           {showTable && (
-            <Tabs>
+            <Tabs width="100%">
               <TabList>
                 <Tab width="50%">Basic</Tab>
                 <Tab width="50%">Voiced</Tab>
               </TabList>
               <TabPanels>
-                <TabPanel>
+                <TabPanel width="100%" padding={0}>
                   <KanaTable kanaSet={kanaData.basic} />
                 </TabPanel>
-                <TabPanel>
+                <TabPanel width="100%" padding={0}>
                   <KanaTable kanaSet={kanaData.voiced} />
                 </TabPanel>
               </TabPanels>
